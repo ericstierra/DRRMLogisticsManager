@@ -20,14 +20,17 @@
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
-        Dim aboutMessage As String = "Project Name: DRRM Logistics Manager" & vbCrLf &
+        Dim aboutMessage As String = "Project Name: DRRM Disbursement System" & vbCrLf &
         "--------" & vbCrLf &
         "Team Members:" & vbCrLf &
         "Eric Tierra (Lead Developer)" & vbCrLf &
         "Angelo Lagar (Database Developer)" & vbCrLf &
-        "Christel Formaran (UI Design & Tester )" & vbCrLf &
-        "Khen Bryan Estrada (UI Design & Tester )" & vbCrLf &
-        "Ann Shiela Austria (Tester & Technical Writer)" & vbCrLf &
+        "Christel Formaran (UI Design & Tester)" & vbCrLf &
+        "Khen Bryan Estrada (UI Design & Tester)" & vbCrLf &
+        "Ann Shiela Austria (UI Design & Tester)" & vbCrLf &
+        "Klimson Guevarra (UI Design & Tester)" & vbCrLf &
+        "Yeysha (UI Design & Tester)" & vbCrLf &
+        "Alvil Villareal (UI Design & Tester)" & vbCrLf &
         "--------" & vbCrLf &
         "Course/Year/Section: BSCS II-C" & vbCrLf &
         "Subject: CC103 - Data Structures and Algorithms"

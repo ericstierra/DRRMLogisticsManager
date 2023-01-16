@@ -29,7 +29,7 @@ Public Class frmDisburseItem
                     MessageBox.Show("This item has already been disbursed. Please select another item.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
                     'create a command to insert data into tbl_disbursed
-                    Dim cmd As New OleDbCommand("INSERT INTO tbl_disbursed (d_date, d_name, department, item_code, item_name, d_status) VALUES (@d_date, @name, @dep, @item_code, @item_name, @d_qty)", conn)
+                    Dim cmd As New OleDbCommand("INSERT INTO tbl_disbursed (d_date, d_name, department, item_code, item_name, d_qty) VALUES (@d_date, @name, @dep, @item_code, @item_name, @d_qty)", conn)
                     cmd.Parameters.AddWithValue("@d_date", Date.Today.ToString("MM/dd/yyyy"))
                     cmd.Parameters.AddWithValue("@name", txtName.Text)
                     cmd.Parameters.AddWithValue("@dep", cmbDep.Text)
@@ -61,7 +61,7 @@ Public Class frmDisburseItem
     End Sub
 
     Private Sub txtItemCode_LostFocus(sender As Object, e As EventArgs) Handles txtItemcode.GotFocus
-        Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\est_database\db_drrmlogistics.accdb"
+        Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\db_drrmlogistics.accdb"
         Using conn As New OleDbConnection(connString)
             Dim item_code As String = txtItemcode.Text
             Dim itemName As String = ""

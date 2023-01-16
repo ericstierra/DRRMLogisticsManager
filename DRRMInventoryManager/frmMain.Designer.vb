@@ -68,13 +68,13 @@ Partial Class frmMain
         'AddItemToolStripMenuItem
         '
         Me.AddItemToolStripMenuItem.Name = "AddItemToolStripMenuItem"
-        Me.AddItemToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AddItemToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.AddItemToolStripMenuItem.Text = "New Item"
         '
         'ItemsListToolStripMenuItem
         '
         Me.ItemsListToolStripMenuItem.Name = "ItemsListToolStripMenuItem"
-        Me.ItemsListToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ItemsListToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.ItemsListToolStripMenuItem.Text = "Items List"
         '
         'ViewToolStripMenuItem
@@ -192,7 +192,7 @@ Partial Class frmMain
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMain"
-        Me.Text = "DRRM Logistics Manager v1.0"
+        Me.Text = "DRRM Disbursement System"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

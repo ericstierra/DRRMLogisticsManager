@@ -26,14 +26,6 @@ Partial Class frmItemsList
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmItemsList))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.tsbAddItem = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsbDisburse = New System.Windows.Forms.ToolStripButton()
-        Me.tsbRefresh = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.item_code = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.item_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.category = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,6 +35,17 @@ Partial Class frmItemsList
         Me.condition = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.location = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tsbAddItem = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbDisburse = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbRefresh = New System.Windows.Forms.ToolStripButton()
+        Me.tsbBorrowButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.txtSearchBox = New System.Windows.Forms.ToolStripTextBox()
+        Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -69,7 +72,7 @@ Partial Class frmItemsList
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.item_code, Me.item_name, Me.category, Me.description, Me.qty, Me.unit, Me.condition, Me.Status, Me.location})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Cascadia Mono", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Cascadia Mono", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGoldenrod
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -83,64 +86,6 @@ Partial Class frmItemsList
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(1268, 662)
         Me.DataGridView1.TabIndex = 1
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbAddItem, Me.ToolStripSeparator2, Me.tsbDisburse, Me.ToolStripSeparator3, Me.tsbRefresh, Me.ToolStripSeparator1, Me.ToolStripButton1})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 672)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1280, 25)
-        Me.ToolStrip1.TabIndex = 2
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'tsbAddItem
-        '
-        Me.tsbAddItem.Image = CType(resources.GetObject("tsbAddItem.Image"), System.Drawing.Image)
-        Me.tsbAddItem.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbAddItem.Name = "tsbAddItem"
-        Me.tsbAddItem.Size = New System.Drawing.Size(76, 22)
-        Me.tsbAddItem.Text = "Add Item"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'tsbDisburse
-        '
-        Me.tsbDisburse.Image = CType(resources.GetObject("tsbDisburse.Image"), System.Drawing.Image)
-        Me.tsbDisburse.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbDisburse.Name = "tsbDisburse"
-        Me.tsbDisburse.Size = New System.Drawing.Size(99, 22)
-        Me.tsbDisburse.Text = "Disburse Item"
-        '
-        'tsbRefresh
-        '
-        Me.tsbRefresh.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.tsbRefresh.Image = CType(resources.GetObject("tsbRefresh.Image"), System.Drawing.Image)
-        Me.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbRefresh.Name = "tsbRefresh"
-        Me.tsbRefresh.Size = New System.Drawing.Size(66, 22)
-        Me.tsbRefresh.Text = "Refresh"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(92, 22)
-        Me.ToolStripButton1.Text = "Borrow Item"
         '
         'item_code
         '
@@ -205,6 +150,91 @@ Partial Class frmItemsList
         Me.location.Name = "location"
         Me.location.ReadOnly = True
         '
+        'tsbAddItem
+        '
+        Me.tsbAddItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tsbAddItem.Image = CType(resources.GetObject("tsbAddItem.Image"), System.Drawing.Image)
+        Me.tsbAddItem.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbAddItem.Name = "tsbAddItem"
+        Me.tsbAddItem.Size = New System.Drawing.Size(75, 22)
+        Me.tsbAddItem.Text = "Add Item"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'tsbDisburse
+        '
+        Me.tsbDisburse.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tsbDisburse.Image = CType(resources.GetObject("tsbDisburse.Image"), System.Drawing.Image)
+        Me.tsbDisburse.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbDisburse.Name = "tsbDisburse"
+        Me.tsbDisburse.Size = New System.Drawing.Size(103, 22)
+        Me.tsbDisburse.Text = "Disburse Item"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
+        '
+        'tsbRefresh
+        '
+        Me.tsbRefresh.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.tsbRefresh.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tsbRefresh.Image = CType(resources.GetObject("tsbRefresh.Image"), System.Drawing.Image)
+        Me.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbRefresh.Name = "tsbRefresh"
+        Me.tsbRefresh.Size = New System.Drawing.Size(70, 22)
+        Me.tsbRefresh.Text = "Refresh"
+        '
+        'tsbBorrowButton
+        '
+        Me.tsbBorrowButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tsbBorrowButton.Image = CType(resources.GetObject("tsbBorrowButton.Image"), System.Drawing.Image)
+        Me.tsbBorrowButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbBorrowButton.Name = "tsbBorrowButton"
+        Me.tsbBorrowButton.Size = New System.Drawing.Size(93, 22)
+        Me.tsbBorrowButton.Text = "Borrow Item"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator2, Me.txtSearchBox, Me.tsbSearch, Me.ToolStripSeparator1, Me.tsbAddItem, Me.tsbDisburse, Me.ToolStripSeparator3, Me.tsbRefresh, Me.tsbBorrowButton, Me.ToolStripSeparator4})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 672)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(1280, 25)
+        Me.ToolStrip1.TabIndex = 2
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'txtSearchBox
+        '
+        Me.txtSearchBox.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.txtSearchBox.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchBox.Name = "txtSearchBox"
+        Me.txtSearchBox.Size = New System.Drawing.Size(100, 25)
+        Me.txtSearchBox.Text = "Type Item Code"
+        '
+        'tsbSearch
+        '
+        Me.tsbSearch.BackColor = System.Drawing.Color.LightGray
+        Me.tsbSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tsbSearch.Image = CType(resources.GetObject("tsbSearch.Image"), System.Drawing.Image)
+        Me.tsbSearch.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbSearch.Name = "tsbSearch"
+        Me.tsbSearch.Size = New System.Drawing.Size(66, 22)
+        Me.tsbSearch.Text = "Search"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
         'frmItemsList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -227,14 +257,6 @@ Partial Class frmItemsList
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents tsbAddItem As ToolStripButton
-    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents tsbRefresh As ToolStripButton
-    Friend WithEvents tsbDisburse As ToolStripButton
-    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
-    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents item_code As DataGridViewTextBoxColumn
     Friend WithEvents item_name As DataGridViewTextBoxColumn
     Friend WithEvents category As DataGridViewTextBoxColumn
@@ -244,4 +266,15 @@ Partial Class frmItemsList
     Friend WithEvents condition As DataGridViewTextBoxColumn
     Friend WithEvents Status As DataGridViewTextBoxColumn
     Friend WithEvents location As DataGridViewTextBoxColumn
+    Friend WithEvents tsbAddItem As ToolStripButton
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents tsbDisburse As ToolStripButton
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents tsbRefresh As ToolStripButton
+    Friend WithEvents tsbBorrowButton As ToolStripButton
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents txtSearchBox As ToolStripTextBox
+    Friend WithEvents tsbSearch As ToolStripButton
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
 End Class

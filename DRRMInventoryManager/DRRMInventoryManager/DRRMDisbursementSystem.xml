@@ -2,21 +2,21 @@
 <doc>
 <assembly>
 <name>
-DRRMInventoryManager
+DRRMDisbursementSystem
 </name>
 </assembly>
 <members>
-<member name="T:DRRMInventoryManager.My.Resources.Resources">
+<member name="T:DRRMDisbursementSystem.My.Resources.Resources">
 <summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member>
-<member name="P:DRRMInventoryManager.My.Resources.Resources.ResourceManager">
+<member name="P:DRRMDisbursementSystem.My.Resources.Resources.ResourceManager">
 <summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
 </member>
-<member name="P:DRRMInventoryManager.My.Resources.Resources.Culture">
+<member name="P:DRRMDisbursementSystem.My.Resources.Resources.Culture">
 <summary>
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.

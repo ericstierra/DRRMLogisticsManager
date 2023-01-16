@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F3D9498B-0A53-4A3F-8FF4-AF3081A9D7A8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>DRRMInventoryManager.My.MyApplication</StartupObject>
-    <RootNamespace>DRRMInventoryManager</RootNamespace>
-    <AssemblyName>DRRMInventoryManager</AssemblyName>
+    <StartupObject>DRRMDisbursementSystem.frmLogin</StartupObject>
+    <RootNamespace>DRRMDisbursementSystem</RootNamespace>
+    <AssemblyName>DRRMDisbursementSystem</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>DRRMInventoryManager\</OutputPath>
-    <DocumentationFile>DRRMInventoryManager.xml</DocumentationFile>
+    <DocumentationFile>DRRMDisbursementSystem.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
@@ -33,7 +33,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>DRRMInventoryManager.xml</DocumentationFile>
+    <DocumentationFile>DRRMDisbursementSystem.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -50,6 +50,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Skyetech Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
@@ -115,10 +118,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="frmAddItem.Designer.vb">
       <DependentUpon>frmAddItem.vb</DependentUpon>
     </Compile>
     <Compile Include="frmAddItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBorrowItem.Designer.vb">
+      <DependentUpon>frmBorrowItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBorrowItem.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDisbursedList.Designer.vb">
@@ -143,6 +153,12 @@
       <DependentUpon>frmItemsList.vb</DependentUpon>
     </Compile>
     <Compile Include="frmItemsList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.vb">
@@ -173,6 +189,9 @@
     <EmbeddedResource Include="frmAddItem.resx">
       <DependentUpon>frmAddItem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBorrowItem.resx">
+      <DependentUpon>frmBorrowItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDisbursedList.resx">
       <DependentUpon>frmDisbursedList.vb</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +204,9 @@
     <EmbeddedResource Include="frmItemsList.resx">
       <DependentUpon>frmItemsList.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +218,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

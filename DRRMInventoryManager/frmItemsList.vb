@@ -64,24 +64,26 @@ Public Class frmItemsList
 
         DataGridView1.AutoGenerateColumns = False
         DataGridView1.DataSource = table
-        DataGridView1.Columns(0).Width = 150
-        DataGridView1.Columns(1).Width = 250
-        DataGridView1.Columns(2).Width = 180
-        DataGridView1.Columns(3).Width = 500
-        DataGridView1.Columns(4).Width = 80
-        DataGridView1.Columns(5).Width = 150
-        DataGridView1.Columns(6).Width = 150
-        DataGridView1.Columns(7).Width = 150
-        DataGridView1.Columns(8).Width = 150
+
+        ' DataGridView1.Columns(0).Width = 150
+        'DataGridView1.Columns(1).Width = 250
+        ' DataGridView1.Columns(2).Width = 180
+        'DataGridView1.Columns(3).Width = 500
+        'DataGridView1.Columns(4).Width = 80
+        'DataGridView1.Columns(5).Width = 150
+        'DataGridView1.Columns(6).Width = 150
+        ' DataGridView1.Columns(7).Width = 150
+        ' DataGridView1.Columns(8).Width = 150
 
 
         'Cells Allignment
-        DataGridView1.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-        DataGridView1.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        ' DataGridView1.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        ' DataGridView1.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
         'ColumnHeader Allignment
-        DataGridView1.Columns(0).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridView1.Columns(4).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight
+        ' DataGridView1.Columns(0).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        ' DataGridView1.Columns(4).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight
+
     End Sub
 
     Private Sub DefineButtonCells()
@@ -119,5 +121,33 @@ Public Class frmItemsList
             ' Display an error message
             MessageBox.Show("The form is already open!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+    End Sub
+
+    Private Sub tsbBorrowButton_Click(sender As Object, e As EventArgs) Handles tsbBorrowButton.Click
+        ' Check if the form is already open
+        If Not Application.OpenForms().OfType(Of frmBorrowItem).Any Then
+            Dim frm As New frmBorrowItem
+            frm.Show()
+        Else
+            ' Display an error message
+            MessageBox.Show("The form is already open!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+
+    Private Sub txtSearchBox_TextChanged(sender As Object, e As EventArgs) Handles txtSearchBox.TextChanged
+
+    End Sub
+
+    Private Sub tsbSearch_Click(sender As Object, e As EventArgs) Handles tsbSearch.Click
+        conn.Open()
+        Dim cmd As New OleDbCommand
+        Dim da As New OleDbDataAdapter
+        Dim dt As New DataTable
+        cmd.Connection = conn
+        cmd.CommandText = "SELECT * FROM tbl_items WHERE item_name LIKE '%" & txtSearchBox.Text & "%'"
+        da.SelectCommand = cmd
+        da.Fill(dt)
+        DataGridView1.DataSource = dt
+        conn.Close()
     End Sub
 End Class
