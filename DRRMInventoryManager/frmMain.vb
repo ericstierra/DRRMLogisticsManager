@@ -28,9 +28,9 @@
         "Christel Formaran (UI Design & Tester)" & vbCrLf &
         "Khen Bryan Estrada (UI Design & Tester)" & vbCrLf &
         "Ann Shiela Austria (UI Design & Tester)" & vbCrLf &
-        "Klimson Guevarra (UI Design & Tester)" & vbCrLf &
-        "Yeysha (UI Design & Tester)" & vbCrLf &
+        "Yeysha Alva(UI Design & Tester)" & vbCrLf &
         "Alvil Villareal (UI Design & Tester)" & vbCrLf &
+        "Klim Son Guevarra (UI Design & Tester)" & vbCrLf &
         "--------" & vbCrLf &
         "Course/Year/Section: BSCS II-C" & vbCrLf &
         "Subject: CC103 - Data Structures and Algorithms"
@@ -63,9 +63,24 @@
             Me.WindowState = FormWindowState.Maximized
         End If
     End Sub
-
-    Private Sub DisburseTSM_Click(sender As Object, e As EventArgs) Handles DisburseTSM.Click
+    Private Sub DisbursedItemsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DisbursedItemsToolStripMenuItem.Click
         Dim frm As New frmDisbursedList()
+        frm.TopLevel = False
+        mainPanel.Controls.Add(frm)
+        frm.Show()
+    End Sub
+
+    Private Sub tsbLogoff_Click(sender As Object, e As EventArgs) Handles tsbLogoff.Click
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to logout?", "Confirmation", MessageBoxButtons.YesNo)
+        If result = DialogResult.Yes Then
+            Dim frmlogout As New frmLogin()
+            frmlogout.Show()
+            Me.Hide()
+        End If
+    End Sub
+
+    Private Sub tsmBorrowedList_Click(sender As Object, e As EventArgs) Handles tsmBorrowedList.Click
+        Dim frm As New frmBorrowedList()
         frm.TopLevel = False
         mainPanel.Controls.Add(frm)
         frm.Show()

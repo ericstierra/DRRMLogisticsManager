@@ -125,6 +125,12 @@
     <Compile Include="frmAddItem.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmBorrowedList.Designer.vb">
+      <DependentUpon>frmBorrowedList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBorrowedList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmBorrowItem.Designer.vb">
       <DependentUpon>frmBorrowItem.vb</DependentUpon>
     </Compile>
@@ -188,6 +194,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmAddItem.resx">
       <DependentUpon>frmAddItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBorrowedList.resx">
+      <DependentUpon>frmBorrowedList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBorrowItem.resx">
       <DependentUpon>frmBorrowItem.vb</DependentUpon>

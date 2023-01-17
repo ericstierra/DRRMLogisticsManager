@@ -25,22 +25,18 @@ Partial Class frmMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ItemsListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ItemListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisbursedItemsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BorrowedItemsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StaffsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DisburseTSM = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BorrowerManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmBorrowedList = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
+        Me.tsbLogoff = New System.Windows.Forms.ToolStripButton()
         Me.mainPanel = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -51,7 +47,7 @@ Partial Class frmMain
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.MenuStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem, Me.StaffsToolStripMenuItem, Me.PrintToolStripMenuItem, Me.AboutToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem, Me.PrintToolStripMenuItem, Me.AboutToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1540, 24)
@@ -60,26 +56,20 @@ Partial Class frmMain
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddItemToolStripMenuItem, Me.ItemsListToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ItemsListToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
-        'AddItemToolStripMenuItem
-        '
-        Me.AddItemToolStripMenuItem.Name = "AddItemToolStripMenuItem"
-        Me.AddItemToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
-        Me.AddItemToolStripMenuItem.Text = "New Item"
-        '
         'ItemsListToolStripMenuItem
         '
         Me.ItemsListToolStripMenuItem.Name = "ItemsListToolStripMenuItem"
-        Me.ItemsListToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
-        Me.ItemsListToolStripMenuItem.Text = "Items List"
+        Me.ItemsListToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ItemsListToolStripMenuItem.Text = "View Items List"
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ItemListToolStripMenuItem, Me.DisbursedItemsToolStripMenuItem, Me.BorrowedItemsToolStripMenuItem})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ItemListToolStripMenuItem, Me.DisbursedItemsToolStripMenuItem, Me.tsmBorrowedList})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(45, 20)
         Me.ViewToolStripMenuItem.Text = "View"
@@ -87,39 +77,20 @@ Partial Class frmMain
         'ItemListToolStripMenuItem
         '
         Me.ItemListToolStripMenuItem.Name = "ItemListToolStripMenuItem"
-        Me.ItemListToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.ItemListToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ItemListToolStripMenuItem.Text = "Item List"
         '
         'DisbursedItemsToolStripMenuItem
         '
         Me.DisbursedItemsToolStripMenuItem.Name = "DisbursedItemsToolStripMenuItem"
-        Me.DisbursedItemsToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.DisbursedItemsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DisbursedItemsToolStripMenuItem.Text = "Disbursed Items"
         '
-        'BorrowedItemsToolStripMenuItem
+        'tsmBorrowedList
         '
-        Me.BorrowedItemsToolStripMenuItem.Name = "BorrowedItemsToolStripMenuItem"
-        Me.BorrowedItemsToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
-        Me.BorrowedItemsToolStripMenuItem.Text = "Borrowed Items"
-        '
-        'StaffsToolStripMenuItem
-        '
-        Me.StaffsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DisburseTSM, Me.BorrowerManagementToolStripMenuItem})
-        Me.StaffsToolStripMenuItem.Name = "StaffsToolStripMenuItem"
-        Me.StaffsToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
-        Me.StaffsToolStripMenuItem.Text = "Services"
-        '
-        'DisburseTSM
-        '
-        Me.DisburseTSM.Name = "DisburseTSM"
-        Me.DisburseTSM.Size = New System.Drawing.Size(201, 22)
-        Me.DisburseTSM.Text = "Disbursement"
-        '
-        'BorrowerManagementToolStripMenuItem
-        '
-        Me.BorrowerManagementToolStripMenuItem.Name = "BorrowerManagementToolStripMenuItem"
-        Me.BorrowerManagementToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
-        Me.BorrowerManagementToolStripMenuItem.Text = "Borrower Management"
+        Me.tsmBorrowedList.Name = "tsmBorrowedList"
+        Me.tsmBorrowedList.Size = New System.Drawing.Size(180, 22)
+        Me.tsmBorrowedList.Text = "Borrowed Items"
         '
         'PrintToolStripMenuItem
         '
@@ -143,7 +114,7 @@ Partial Class frmMain
         '
         Me.ToolStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.ToolStripSeparator1, Me.ToolStripButton3})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.ToolStripSeparator1, Me.tsbLogoff})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1540, 27)
@@ -162,14 +133,14 @@ Partial Class frmMain
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
         '
-        'ToolStripButton3
+        'tsbLogoff
         '
-        Me.ToolStripButton3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
-        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(69, 24)
-        Me.ToolStripButton3.Text = "Logout"
+        Me.tsbLogoff.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.tsbLogoff.Image = CType(resources.GetObject("tsbLogoff.Image"), System.Drawing.Image)
+        Me.tsbLogoff.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbLogoff.Name = "tsbLogoff"
+        Me.tsbLogoff.Size = New System.Drawing.Size(69, 24)
+        Me.tsbLogoff.Text = "Logout"
         '
         'mainPanel
         '
@@ -205,10 +176,6 @@ Partial Class frmMain
 
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AddItemToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents StaffsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DisburseTSM As ToolStripMenuItem
-    Friend WithEvents BorrowerManagementToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PrintToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
@@ -216,10 +183,10 @@ Partial Class frmMain
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ToolStripLabel1 As ToolStripLabel
-    Friend WithEvents ToolStripButton3 As ToolStripButton
+    Friend WithEvents tsbLogoff As ToolStripButton
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ItemListToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DisbursedItemsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BorrowedItemsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents tsmBorrowedList As ToolStripMenuItem
     Friend WithEvents mainPanel As Panel
 End Class

@@ -143,11 +143,11 @@
         RK5CYII=
 </value>
   </data>
-  <data name="ToolStripButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tsbLogoff.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANVSURBVHhe7Zu9bRRRFEZfiAgQIQGBQ0RABVRAQExAQAn0
-        QAEUQEBAAQQUQEAJiJiAAhwgYYk/8z1pRpinNbtzd37u2+8c6Uh4PTszO3t0b2IKAAAAAAAAAEAv/Crl
+        QAEUQEBAAQQUQEAJiJiAAhwgZIk/8z1pRpinNbtzd37u2+8c6Uh4PTszO3t0b2IKAAAAAAAAAEAv/Crl
         jXyLIV8Mj7FfLko5vyzlEqerAN4Pj7FfCCAuAZhLAOYSgLkEYC4BmEsA5hKAuQRgLgGYSwDmEoC5BGAu
         AZh7EgH8LuWRfGzq811f7KGeRADOKIAHu77YQyWAziEAcwjAHAIwhwDMIQBzCMAcAjCHAMwhAHMIwBwC
         MIcAzCEAc7oPQB/gqW7kzvAjTKTbAHTxG7r4q+FGzoaXYSJdBqAL3/tZyscrN0IAQboLoI78b6V8bW6E
@@ -160,7 +160,7 @@
         RCeeuhIIIEjKACoTVwIBBEkbQEUXOHQlEECQ1AGM6EL7VgIBBOkigMqelUAAQboJoKILXrcSCCBIVwGM
         6MLtSiCAIF0GUGlWAgEE6TaAim5gXAkEEKTrAOB4CMAcAjCHAMwhAHMIwBwCMIcAzCEAcwjAHAIwhwDM
         IQBzCMAcAjCHAIQewi19mNum1v9av/PLPcSTCOCilPNdHw73SwDmEoC5BGAuAZhLAOYSgLkEYC4BmEsA
-        5hKAuQRgLgGYSwDmEoC5JxGAPsS7+kEw5MvhMQIAAAAAAADAyVPKH+zE+OR5QYXGAAAAAElFTkSuQmCC
+        5hKAuQRgLgGYSwDmEoC5JxGAPsS7+kEw5MvhMQIAAAAAAADAyVPKH2xK+NUBpfZrAAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
