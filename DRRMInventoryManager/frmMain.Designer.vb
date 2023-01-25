@@ -30,9 +30,7 @@ Partial Class frmMain
         Me.ItemListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisbursedItemsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmBorrowedList = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -47,7 +45,7 @@ Partial Class frmMain
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.MenuStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem, Me.PrintToolStripMenuItem, Me.AboutToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1540, 24)
@@ -64,7 +62,7 @@ Partial Class frmMain
         'ItemsListToolStripMenuItem
         '
         Me.ItemsListToolStripMenuItem.Name = "ItemsListToolStripMenuItem"
-        Me.ItemsListToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ItemsListToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.ItemsListToolStripMenuItem.Text = "View Items List"
         '
         'ViewToolStripMenuItem
@@ -77,38 +75,26 @@ Partial Class frmMain
         'ItemListToolStripMenuItem
         '
         Me.ItemListToolStripMenuItem.Name = "ItemListToolStripMenuItem"
-        Me.ItemListToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ItemListToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.ItemListToolStripMenuItem.Text = "Item List"
         '
         'DisbursedItemsToolStripMenuItem
         '
         Me.DisbursedItemsToolStripMenuItem.Name = "DisbursedItemsToolStripMenuItem"
-        Me.DisbursedItemsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DisbursedItemsToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.DisbursedItemsToolStripMenuItem.Text = "Disbursed Items"
         '
         'tsmBorrowedList
         '
         Me.tsmBorrowedList.Name = "tsmBorrowedList"
-        Me.tsmBorrowedList.Size = New System.Drawing.Size(180, 22)
+        Me.tsmBorrowedList.Size = New System.Drawing.Size(163, 22)
         Me.tsmBorrowedList.Text = "Borrowed Items"
-        '
-        'PrintToolStripMenuItem
-        '
-        Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
-        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.PrintToolStripMenuItem.Text = "Print"
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.AboutToolStripMenuItem.Text = "About"
-        '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(45, 20)
-        Me.HelpToolStripMenuItem.Text = "Help"
         '
         'ToolStrip1
         '
@@ -163,7 +149,7 @@ Partial Class frmMain
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMain"
-        Me.Text = "DRRM Disbursement System"
+        Me.Text = "DRRM Disbursement System v1.0"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -176,7 +162,6 @@ Partial Class frmMain
 
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents PrintToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ItemsListToolStripMenuItem As ToolStripMenuItem
@@ -184,7 +169,6 @@ Partial Class frmMain
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ToolStripLabel1 As ToolStripLabel
     Friend WithEvents tsbLogoff As ToolStripButton
-    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ItemListToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DisbursedItemsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents tsmBorrowedList As ToolStripMenuItem

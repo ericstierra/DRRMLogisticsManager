@@ -62,6 +62,12 @@
         Else
             Me.WindowState = FormWindowState.Maximized
         End If
+
+        'Load the Items List
+        Dim frm As New frmItemsList()
+        frm.TopLevel = False
+        mainPanel.Controls.Add(frm)
+        frm.Show()
     End Sub
     Private Sub DisbursedItemsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DisbursedItemsToolStripMenuItem.Click
         Dim frm As New frmDisbursedList()

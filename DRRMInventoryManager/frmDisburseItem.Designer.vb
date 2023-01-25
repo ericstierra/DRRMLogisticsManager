@@ -25,18 +25,18 @@ Partial Class frmDisburseItem
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDisburseItem))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtItemcode = New System.Windows.Forms.TextBox()
+        Me.txtItemName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.cmbDep = New System.Windows.Forms.ComboBox()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.tsbClear = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbProcess = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.txtItemName = New System.Windows.Forms.TextBox()
-        Me.cmbDep = New System.Windows.Forms.ComboBox()
-        Me.txtItemcode = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -66,6 +66,23 @@ Partial Class frmDisburseItem
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(379, 180)
         Me.Panel1.TabIndex = 32
+        '
+        'txtItemcode
+        '
+        Me.txtItemcode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtItemcode.Location = New System.Drawing.Point(93, 98)
+        Me.txtItemcode.Name = "txtItemcode"
+        Me.txtItemcode.Size = New System.Drawing.Size(255, 21)
+        Me.txtItemcode.TabIndex = 31
+        '
+        'txtItemName
+        '
+        Me.txtItemName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtItemName.Location = New System.Drawing.Point(93, 128)
+        Me.txtItemName.Name = "txtItemName"
+        Me.txtItemName.ReadOnly = True
+        Me.txtItemName.Size = New System.Drawing.Size(255, 21)
+        Me.txtItemName.TabIndex = 30
         '
         'Label2
         '
@@ -107,6 +124,16 @@ Partial Class frmDisburseItem
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Department:"
         '
+        'cmbDep
+        '
+        Me.cmbDep.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbDep.FormattingEnabled = True
+        Me.cmbDep.Items.AddRange(New Object() {"DRRM Office", "HRM Office", "Accounting Office", "Planning Office", "Budget Office"})
+        Me.cmbDep.Location = New System.Drawing.Point(93, 67)
+        Me.cmbDep.Name = "cmbDep"
+        Me.cmbDep.Size = New System.Drawing.Size(255, 23)
+        Me.cmbDep.TabIndex = 17
+        '
         'txtName
         '
         Me.txtName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -146,33 +173,6 @@ Partial Class frmDisburseItem
         Me.ToolStrip1.TabIndex = 31
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'txtItemName
-        '
-        Me.txtItemName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtItemName.Location = New System.Drawing.Point(93, 128)
-        Me.txtItemName.Name = "txtItemName"
-        Me.txtItemName.ReadOnly = True
-        Me.txtItemName.Size = New System.Drawing.Size(255, 21)
-        Me.txtItemName.TabIndex = 30
-        '
-        'cmbDep
-        '
-        Me.cmbDep.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbDep.FormattingEnabled = True
-        Me.cmbDep.Items.AddRange(New Object() {"DRRM Office", "HRM Office", "Accounting Office", "Planning Office", "Budget Office"})
-        Me.cmbDep.Location = New System.Drawing.Point(93, 67)
-        Me.cmbDep.Name = "cmbDep"
-        Me.cmbDep.Size = New System.Drawing.Size(255, 23)
-        Me.cmbDep.TabIndex = 17
-        '
-        'txtItemcode
-        '
-        Me.txtItemcode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtItemcode.Location = New System.Drawing.Point(93, 98)
-        Me.txtItemcode.Name = "txtItemcode"
-        Me.txtItemcode.Size = New System.Drawing.Size(255, 21)
-        Me.txtItemcode.TabIndex = 31
-        '
         'frmDisburseItem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -182,6 +182,7 @@ Partial Class frmDisburseItem
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Name = "frmDisburseItem"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Disburse Item"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
